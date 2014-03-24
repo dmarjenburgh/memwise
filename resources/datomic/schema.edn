@@ -1,0 +1,39 @@
+[{:db/id #db/id[:db.part/db]
+  :db/ident :deck/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/unique :db.unique/value
+  :db/doc "A unique deck name (no upsert)"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :deck/nrOfFields
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db/doc "The number of fields each card in the deck has"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :card/deck
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/isComponent true
+  :db/doc "The deck to which the card belongs"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :field/card
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/isComponent true
+  :db/doc "The field of a card"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :field/content
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "The field content"
+  :db.install/_attribute :db.part/db}
+ ]
+

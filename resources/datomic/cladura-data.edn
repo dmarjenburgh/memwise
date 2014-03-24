@@ -1,0 +1,7 @@
+[{:db/id #db/id[:db.part/user -1] :deck/name "Japanese words" :deck/nrOfFields 3}
+ {:db/id #db/id[:db.part/user -2] :card/deck #db/id[:db.part/user -1]}
+ {:db/id #db/id[:db.part/user -3] :field/card #db/id[:db.part/user -2]}
+ {:db/id #db/id[:db.part/user -3] :field/content "光"}
+ {:db/id #db/id[:db.part/user -3] :field/content "ひかり"}
+ {:db/id #db/id[:db.part/user -3] :field/content "Light"}
+ ]
