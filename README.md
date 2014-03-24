@@ -14,7 +14,7 @@ The project is still hugely in its infancy. Future features will include:
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 BonsaiT
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
