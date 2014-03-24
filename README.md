@@ -1,10 +1,16 @@
-# cladura
+# Cladura
 
-A Clojure library designed to ... well, that part is up to you.
+Cladura is an application to help with rehearsal of facts/words.
 
-## Usage
+It is built using Clojure on top of Datomic.
 
-FIXME
+# Features
+
+The project is still hugely in its infancy. Future features will include:
+* A web interface
+* Customizable decks that can be shared
+* A customizable rehearsing strategy, based on the Leitner system
+* Automatic tracking of rehearsal statistics
 
 ## License
 
