@@ -22,7 +22,9 @@
   (fact "We can add new decks"
     (let [new-deck-name "some-test-deck"
           nr-of-fields 2
-          {no-decks-db :db-before one-deck-db :db-after} (d/with base-db (add-new-deck-tx new-deck-name nr-of-fields))]
+          {no-decks-db :db-before
+           one-deck-db :db-after} (d/with base-db
+                                    (add-new-deck-tx new-deck-name nr-of-fields))]
       (select-decks no-decks-db) => empty?
       (select-decks one-deck-db) => #{[new-deck-name nr-of-fields]}
       (let [{:keys [db-before db-after]} (d/with one-deck-db (add-new-deck-tx "another test deck" nr-of-fields))]
@@ -39,10 +41,12 @@
     (fact "New decks have no cards"
       (select-cards-from-deck db deck-name) => empty?)
     (fact "We can add new cards"
-      (add-new-card-to-deck db deck-name {:fields ["Field 1" "Field 2" "Field 3"]}) => (throws IllegalArgumentException #"2.*3")
+      (add-new-card-to-deck db deck-name {:fields ["Field 1"
+                                                   "Field 2"
+                                                   "Field 3"]}) => (throws IllegalArgumentException #"2.*3")
       (let [new-card {:fields ["Field 1" "Field 2"]}
             db-with-card (:db-after (d/with db (add-card-to-deck-tx deck-name new-card)))
             cards (select-cards-from-deck db-with-card deck-name)
-            contents (select-card-fields db-with-card (ffirst cards))]
+            fields (select-card db-with-card (ffirst cards))]
         (count cards) => 1
-        contents => ["Field 1" "Field 2"]))))
+        fields => #{"Field 1" "Field 2"}))))
