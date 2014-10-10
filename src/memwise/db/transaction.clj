@@ -1,4 +1,4 @@
-(ns cladura.dal.transaction
+(ns memwise.db.transaction
   (:require [datomic.api :as d]
             [clojure.string :as str]))
 

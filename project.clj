@@ -1,4 +1,4 @@
-(defproject cladura "0.1.0-SNAPSHOT"
+(defproject memwise "0.1.0-SNAPSHOT"
   :description "A web application providing a general structure for rehearsing facts"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}

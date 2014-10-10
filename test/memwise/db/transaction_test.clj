@@ -1,6 +1,6 @@
-(ns cladura.dal.transaction-test
+(ns memwise.db.transaction-test
   (:require [midje.sweet :refer :all]
-            [cladura.dal.transaction :refer :all]
+            [memwise.db.transaction :refer :all]
             [datomic.api :as d]))
 
 (def schema-file (load-file "resources/datomic/schema.edn"))

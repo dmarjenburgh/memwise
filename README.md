@@ -1,6 +1,6 @@
-# Cladura
+# MemWise
 
-Cladura is an application to help with rehearsal of facts/words.
+MemWise is an application to help with rehearsal of facts/words.
 
 It is built using Clojure on top of Datomic.
 
